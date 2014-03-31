@@ -100,7 +100,7 @@ ActiveRecord::Schema.define(version: 20140331210553) do
     t.decimal  "pst_rate"
     t.decimal  "gst_rate"
     t.decimal  "hst_rate"
-    t.integer  "cust_id"
+    t.integer  "customer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

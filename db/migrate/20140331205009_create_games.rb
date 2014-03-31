@@ -7,9 +7,9 @@ class CreateGames < ActiveRecord::Migration
       t.decimal :sale_price
       t.integer :stock_quantity
       t.integer :release_year
-      t.integer :publisher_id
-      t.integer :genre_id
-      t.integer :developer_id
+      t.references :publisher
+      t.references :genre
+      t.references :developer
 
       t.timestamps
     end

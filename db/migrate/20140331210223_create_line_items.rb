@@ -4,8 +4,8 @@ class CreateLineItems < ActiveRecord::Migration
       t.integer :quantity
       t.decimal :reg_price
       t.decimal :sale_price
-      t.integer :game_id
-      t.integer :order_id
+      t.references :game
+      t.references :order
 
       t.timestamps
     end

@@ -1,4 +1,7 @@
 CompleteNesCollection::Application.routes.draw do
+  
+  get 'games', to: 'games#index', as:'games'
+  
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.

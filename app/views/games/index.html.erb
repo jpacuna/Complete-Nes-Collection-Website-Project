@@ -1,0 +1,8 @@
+<h1>All Games</h1>
+
+<% @games.each do |game| %>
+  <section
+    <h1><%= game.name %></h1>
+    <p><%= game.description %></p>
+  </section>
+<% end %>

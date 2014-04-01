@@ -13,5 +13,5 @@ ActiveAdmin.register Province do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  
+  permit_params :name, :pst, :gst, :hst
 end

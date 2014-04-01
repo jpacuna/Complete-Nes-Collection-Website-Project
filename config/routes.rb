@@ -1,7 +1,7 @@
 CompleteNesCollection::Application.routes.draw do
   
-  get "genres/index"
-  get "genres/show"
+  get 'publishers', to: 'publishers#index', as: 'publishers'
+  get 'publishers/:id', to: 'publishers#show', as: 'publisher'
   
   get 'genres', to: 'genres#index', as: 'genres'
   get 'genres/:id', to: 'genres#show', as: 'genre'

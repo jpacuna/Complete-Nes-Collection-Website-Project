@@ -1,6 +1,7 @@
 CompleteNesCollection::Application.routes.draw do
   
-  get 'games', to: 'games#index', as:'games'
+  get 'games', to: 'games#index', as:'games'  
+  get 'games/:id', to: 'games#show', as: 'game'
   
   root 'games#index'
   

@@ -1,5 +1,7 @@
 <h1>All Games</h1>
 
+<%= link_to 'By Genre', genres_path %> - <%= link_to 'By Publisher', publishers_path %> - <%= link_to 'By Developer', developers_path %>
+
 <% @games.each do |game| %>
   <section
     <h3><%= link_to game.name, game_path(game) %></h3>

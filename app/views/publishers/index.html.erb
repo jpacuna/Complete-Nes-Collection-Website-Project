@@ -1,8 +1,12 @@
 <h1>All Publishers</h1>
 
+<%= link_to 'Home', games_path %>
+
 <% @publishers.each do |publisher| %>
   <section
     <h3><%= link_to publisher.name, publisher_path(publisher) %></h3>
   </section>
   <hr>
 <% end %>
+
+

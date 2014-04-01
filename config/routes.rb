@@ -1,5 +1,8 @@
 CompleteNesCollection::Application.routes.draw do
   
+  get "developers", to: 'developers#index', as: 'developers'
+  get "developers/:id", to: 'developers#show', as: 'developer'
+  
   get 'publishers', to: 'publishers#index', as: 'publishers'
   get 'publishers/:id', to: 'publishers#show', as: 'publisher'
   

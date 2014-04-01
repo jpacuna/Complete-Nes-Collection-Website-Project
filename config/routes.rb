@@ -1,5 +1,11 @@
 CompleteNesCollection::Application.routes.draw do
   
+  get "genres/index"
+  get "genres/show"
+  
+  get 'genres', to: 'genres#index', as: 'genres'
+  get 'genres/:id', to: 'genres#show', as: 'genre'
+  
   get 'games', to: 'games#index', as:'games'  
   get 'games/:id', to: 'games#show', as: 'game'
   

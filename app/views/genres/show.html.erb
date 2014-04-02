@@ -1,5 +1,9 @@
 <section>
   <h3><%= @genre.name %></h3>
+  <% @genre.games.each do |game| %>
+    <%= link_to game.name, game %>
+    <br />
+  <% end %>
 </section>
-
+<br />
 <p><%= link_to 'Back', genres_path %></p>

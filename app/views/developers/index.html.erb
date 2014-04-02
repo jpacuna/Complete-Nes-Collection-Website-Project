@@ -1,7 +1,5 @@
 <h1>All Developers</h1>
 
-<%= link_to 'Home', games_path %>
-
 <% @developers.each do |developer| %>
   <section
     <h3><%= link_to developer.name, developer_path(developer) %></h3>

@@ -1,6 +1,17 @@
-<section
-  <h3><%= @game.name %></h3>
-  <p><%= @game.description %></p>  
+<section>
+  <h2><%= @game.name %></h2>
+  <h3>$<%= @game.reg_price %></p>
+  <br>
+  <p>
+    Released: <%= @game.release_year %>
+    <br />
+    Genre: <%= @game.genre.name %>
+    <br />
+    Developed by: <%= @game.developer.name %>
+    <br />
+    Published by: <%= @game.publisher.name %>
+  </p>
+  
+  <p><%= @game.description %></p>
 </section>
 
-<p><%= link_to 'Back', games_path %></p>

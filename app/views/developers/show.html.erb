@@ -1,5 +1,10 @@
 <section>
   <h3><%= @developer.name %></h3>
+  <% @developer.games.each do |game| %>
+    <%= link_to game.name, game %>
+    <br />
+  <% end %>
 </section>
+<br />
 
-<p><%= link_to 'Back', games_path %></p>
+<p><%= link_to 'Back', developers_path %></p>

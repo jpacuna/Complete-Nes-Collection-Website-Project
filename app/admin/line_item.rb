@@ -13,5 +13,5 @@ ActiveAdmin.register LineItem do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  
+  permit_params :quantity, :reg_price, :sale_price, :game_id, :order_id
 end

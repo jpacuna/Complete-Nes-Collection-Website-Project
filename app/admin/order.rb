@@ -13,5 +13,5 @@ ActiveAdmin.register Order do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  
+  permit_params :status, :pst_rate, :gst_rate, :hst_rate, :customer_id
 end

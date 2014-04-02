@@ -13,5 +13,6 @@ ActiveAdmin.register Customer do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  
+
+  permit_params :first_name, :last_name, :address, :city, :postal_code, :email, :province_id
 end

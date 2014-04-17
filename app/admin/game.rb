@@ -15,6 +15,6 @@ ActiveAdmin.register Game do
   # end
 
 
-  permit_params :name, :description, :reg_price, :sale_price, :stock_quantity, :release_year, :publisher_id, :genre_id, :developer_id, :image
+  permit_params :name, :description, :reg_price, :sale_price, :stock_quantity, :release_year, :publisher_id, :genre_id, :developer_id
 end
   

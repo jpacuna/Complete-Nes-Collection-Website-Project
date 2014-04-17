@@ -19,7 +19,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 
-gem "paperclip", "~> 4.1"
+#gem "paperclip", "~> 4.1"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

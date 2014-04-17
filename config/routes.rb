@@ -12,6 +12,8 @@ CompleteNesCollection::Application.routes.draw do
   get 'games', to: 'games#index', as:'games'  
   get 'games/:id', to: 'games#show', as: 'game'
   
+  get 'about_us', to: 'about_us#show', as: 'about_us'
+  
   root 'games#index'
   
   devise_for :admin_users, ActiveAdmin::Devise.config

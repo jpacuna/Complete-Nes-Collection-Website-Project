@@ -24,6 +24,8 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'bootstrap-sass', '~> 3.1.1'
 
 gem 'carrierwave'
+#gem 'imagemagick'
+#gem "rmagick"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

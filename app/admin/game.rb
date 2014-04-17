@@ -13,8 +13,9 @@ ActiveAdmin.register Game do
   #  permitted << :other if resource.something?
   #  permitted
   # end
+  #mount_uploader :image, GameImageUploader
 
 
-  permit_params :name, :description, :reg_price, :sale_price, :stock_quantity, :release_year, :publisher_id, :genre_id, :developer_id
+  permit_params :name, :description, :reg_price, :sale_price, :stock_quantity, :release_year, :publisher_id, :genre_id, :developer_id, :image
 end
   

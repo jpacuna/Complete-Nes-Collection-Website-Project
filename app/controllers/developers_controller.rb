@@ -1,7 +1,7 @@
 class DevelopersController < ApplicationController
   
   def index
-    @developers = Developer.all
+    @developers = Developer.all.order("name asc")
   end
 
   def show

@@ -1,5 +1,8 @@
 CompleteNesCollection::Application.routes.draw do
   
+  get "store/index"
+  get "store/search"
+  get "store/search_results"
   get "developers", to: 'developers#index', as: 'developers'
   get "developers/:id", to: 'developers#show', as: 'developer'
   

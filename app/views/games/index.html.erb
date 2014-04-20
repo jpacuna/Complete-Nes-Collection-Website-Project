@@ -1,5 +1,7 @@
 <h2>All Games</h2>
 
+<%= paginate @games %>
+
 <% @games.each do |game| %>
   <section
     <h3><%= link_to game.name, game_path(game) %></h3>

@@ -17,6 +17,9 @@ CompleteNesCollection::Application.routes.draw do
   get 'search', to: 'store#search', as: 'search'
   get 'search_results', to: 'store#search_results', as: 'search_results'
   
+  get 'sale', to: 'store#sale', as: 'sales'
+  get 'new_game', to: 'store#new_game', as: 'new_games'
+  
   root 'store#index'
   
   devise_for :admin_users, ActiveAdmin::Devise.config

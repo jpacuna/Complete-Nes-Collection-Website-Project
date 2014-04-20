@@ -1,5 +1,7 @@
 <h1>Search results for '<%= params[:search_keywords] %>'</h1>
 
+<%= paginate @found_games %>
+
 <% if @found_games.empty? %>
   <p>No games found.</p>
 <% end %>

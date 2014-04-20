@@ -1,4 +1,6 @@
 <section
   <h3><%= link_to game.name, game_path(game) %></h3>
-  <p><%= game.description %></p>    
+  <br>
+  <%= image_tag game.image_url.to_s, height: '150' %>
+  
 </section>

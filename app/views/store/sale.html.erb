@@ -1,0 +1,19 @@
+<h2>On Sale</h2>
+
+<%= paginate @games %>
+
+<% @games.each do |game| %>
+  <br>
+  <strong><%= link_to game.name, game_path(game) %></strong>
+  <br>
+  <%= image_tag game.image_url.to_s, height: '150' %>
+  <br>
+  <p>Regular Price: $<%= game.reg_price %></p>
+  <p>Sale Price: $<%= game.sale_price %></p>
+  <br>
+<% end %>
+
+  
+
+
+

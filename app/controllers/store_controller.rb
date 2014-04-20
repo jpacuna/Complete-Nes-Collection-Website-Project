@@ -1,5 +1,6 @@
 class StoreController < ApplicationController
   def index
+    @genres = Genre.order(:name)
   end
 
   def search

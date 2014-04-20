@@ -1,8 +1,5 @@
 CompleteNesCollection::Application.routes.draw do
   
-  get "store/index"
-  get "store/search"
-  get "store/search_results"
   get "developers", to: 'developers#index', as: 'developers'
   get "developers/:id", to: 'developers#show', as: 'developer'
   
@@ -17,7 +14,10 @@ CompleteNesCollection::Application.routes.draw do
   
   get 'about_us', to: 'about_us#show', as: 'about_us'
   
-  root 'games#index'
+  get 'search', to: 'store#search', as: 'search'
+  get 'search_results', to: 'store#search_results', as: 'search_results'
+  
+  root 'store#index'
   
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

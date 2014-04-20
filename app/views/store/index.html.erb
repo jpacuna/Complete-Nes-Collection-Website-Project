@@ -1,5 +1,4 @@
 <h2>Store</h2>
-<% @genres.each do |genre| %>
-  <h3><%= genre.name %></h3>
-  <%= genre.games[0].name %>
+<% @games.each do |game| %>
+  <h3><%= game.name %></h3>
 <% end %>

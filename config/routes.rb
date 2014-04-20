@@ -1,5 +1,7 @@
 CompleteNesCollection::Application.routes.draw do
   
+  get "cart/index"
+  get "cart/show"
   get "developers", to: 'developers#index', as: 'developers'
   get "developers/:id", to: 'developers#show', as: 'developer'
   

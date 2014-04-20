@@ -1,6 +1,6 @@
 class StoreController < ApplicationController
   def index
-    @genres = Genre.order(:name)
+    @games = Game.order(:name).limit(5)
   end
 
   def search
@@ -8,10 +8,6 @@ class StoreController < ApplicationController
 
   def search_results  
     @found_games = Game.keyword_search(params[:search_keywords]).page(params[:page]).per(5)
-  end
-  
-  def cart
-    @provinces = Province.all
   end
   
   def sale

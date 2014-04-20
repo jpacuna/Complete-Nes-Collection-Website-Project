@@ -6,6 +6,8 @@ class StoreController < ApplicationController
   def search
   end
 
-  def search_results
+  def search_results  
+    @found_games = Game.keyword_search(params[:search_keywords])
   end
+  
 end

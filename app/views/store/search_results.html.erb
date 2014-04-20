@@ -1,2 +1,8 @@
-<h1>Store#search_results</h1>
-<p>Find me in app/views/store/search_results.html.erb</p>
+<h1>Search results for '<%= params[:search_keywords] %>'</h1>
+
+<% if @found_games.empty? %>
+  <p>No games found.</p>
+<% end %>
+
+<%= render partial: 'games/game',
+           collection: @found_games %>

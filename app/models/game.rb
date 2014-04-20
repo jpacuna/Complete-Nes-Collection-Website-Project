@@ -8,6 +8,8 @@ class Game < ActiveRecord::Base
   
   mount_uploader :image, GameImageUploader
   
-  #has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
-  #validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+  def self.keyword_search(keywords)
+    keywords = "%" + keywords + "%"
+    Game.where("name LIKE ? OR description LIKE ?", keywords, keywords)
+  end
 end

@@ -5,6 +5,7 @@ class Game < ActiveRecord::Base
   belongs_to :genre
   belongs_to :developer
   belongs_to :publisher
+  has_many :line_items
   
   mount_uploader :image, GameImageUploader
   
@@ -12,4 +13,5 @@ class Game < ActiveRecord::Base
     keywords = "%" + keywords + "%"
     Game.where("name LIKE ? OR description LIKE ?", keywords, keywords)
   end
+  
 end

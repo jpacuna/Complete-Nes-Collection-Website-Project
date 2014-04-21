@@ -1,7 +1,7 @@
 <h2>Search by Genre</h2>
 
 <% @genres.each do |genre| %>
-  <section
+  <section>
     <h3><%= link_to genre.name, genre_path(genre) %></h3>
   </section>
   <hr>

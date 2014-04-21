@@ -2,7 +2,7 @@
   <h2><%= @game.name %></h2>
   <%= image_tag @game.image_url.to_s, height: '350' %>
   <br>
-  <h3>$<%= @game.reg_price %></p>
+  <h3>$<%= @game.reg_price %> <%= link_to "Add to Cart" %></h3>
   <br>
   
   <p>
@@ -13,9 +13,7 @@
     Developed by: <%= @game.developer.name %>
     <br />
     Published by: <%= @game.publisher.name %>
-  </p>
-  
-  
+  </p>  
   
   <p><%= @game.description %></p>
 </section>

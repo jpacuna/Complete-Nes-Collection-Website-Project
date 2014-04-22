@@ -8,4 +8,8 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
   end
   
+  def add_to_cart
+    
+  end
+  
 end

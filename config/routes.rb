@@ -1,5 +1,7 @@
 CompleteNesCollection::Application.routes.draw do
   
+  resources :cart, only: [:index, :create]
+  
   get "developers", to: 'developers#index', as: 'developers'
   get "developers/:id", to: 'developers#show', as: 'developer'
   

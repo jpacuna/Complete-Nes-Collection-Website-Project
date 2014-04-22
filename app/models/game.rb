@@ -9,9 +9,9 @@ class Game < ActiveRecord::Base
   
   mount_uploader :image, GameImageUploader
   
-  def self.keyword_search(keywords)
+  def self.keyword_search(keywords, genre)
     keywords = "%" + keywords + "%"
-    Game.where("name LIKE ? OR description LIKE ?", keywords, keywords)
+    Game.where("(name LIKE ? OR description LIKE ?) AND genre_id = ?", keywords, keywords, genre)
   end
   
 end

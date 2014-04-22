@@ -1,8 +1,8 @@
-<h2>Search by Developer</h2>
+<h3>Search by Developer</h3>
 
 <% @developers.each do |developer| %>
   <section>
-    <h3><%= link_to developer.name, developer_path(developer) %></h3>
+    <h5><%= link_to developer.name, developer_path(developer) %></h5>
   </section>
   <hr>
 <% end %>

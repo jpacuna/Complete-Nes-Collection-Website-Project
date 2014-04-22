@@ -1,8 +1,8 @@
-<h2>Search by Publisher</h2>
+<h3>Search by Publisher</h3>
 
 <% @publishers.each do |publisher| %>
   <section>
-    <h3><%= link_to publisher.name, publisher_path(publisher) %></h3>
+    <h5><%= link_to publisher.name, publisher_path(publisher) %></h5>
   </section>
   <hr>
 <% end %>

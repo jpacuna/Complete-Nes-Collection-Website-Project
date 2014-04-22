@@ -8,7 +8,6 @@ class StoreController < ApplicationController
 
   def search_results  
     @found_games = Game.keyword_search(params[:search_keywords], params[:ids]).page(params[:page]).per(5)
-    
   end
   
   def sale

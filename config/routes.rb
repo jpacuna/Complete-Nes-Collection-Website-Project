@@ -1,9 +1,9 @@
 CompleteNesCollection::Application.routes.draw do
   
-  resources :cart, only: [:index, :create]
+  #post 'store/cart', to: 'store#create', as: 'add_to_cart'
   
-  get "developers", to: 'developers#index', as: 'developers'
-  get "developers/:id", to: 'developers#show', as: 'developer'
+  get 'developers', to: 'developers#index', as: 'developers'
+  get 'developers/:id', to: 'developers#show', as: 'developer'
   
   get 'publishers', to: 'publishers#index', as: 'publishers'
   get 'publishers/:id', to: 'publishers#show', as: 'publisher'

@@ -1,4 +1,19 @@
-<h2>Store</h2>
-<% @games.each do |game| %>
-  <h3><%= game.name %></h3>
-<% end %>
+<section id="new_games_section">
+  <h3>New Games</h3>
+  <% @new_game.each do |game| %>
+    <div class="new_games">
+      <h5><%= link_to game.name, game_path(game) %></h5>
+      <%= image_tag game.image_url.to_s, height: '100' %>
+    </div>
+  <% end %>
+</section>
+
+<section id="sale_section">
+  <h3>Games On Sale</h3>
+  <% @games_on_sale.each do |game| %>
+    <div class="games_on_sale">
+      <h5><%= link_to game.name, game_path(game) %></h5>
+      <%= image_tag game.image_url.to_s, height: '100' %>
+    </div>
+  <% end %>
+</section>

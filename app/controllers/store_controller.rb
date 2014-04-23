@@ -1,6 +1,8 @@
 class StoreController < ApplicationController
   def index
-    @games = Game.order(:name).limit(5)
+    @games = Game.all
+    @new_game = Game.order("id DESC").where("sale_price IS NULL").limit(5)
+    @games_on_sale = Game.where("sale_price IS NOT NULL").limit(5)
   end
 
   def search
